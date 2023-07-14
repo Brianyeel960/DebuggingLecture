@@ -5,7 +5,7 @@ const oslo = {
   img: "🦧",
   age: "???",
   location: "USA",
-  skills: ["Knives", "Bo-Staff", "Linguistics"],
+  skills: "Knives, Bo-Staff, Linguistics",
   biography: "A trained agent skilled in various ....",
   isDispatched: false
 }
@@ -15,7 +15,7 @@ const xanther = {
   img: "🦈",
   age: 23,
   location: "Pacific Ocean",
-  skills: ["Swimming", "Espionage"],
+  skills: "Swimming, Espionage",
   biography: "A trained agent skilled in various ....",
   isDispatched: false
 }
@@ -25,7 +25,7 @@ const koko = {
   img: "🦍",
   age: 5,
   location: "EU",
-  skills: ["Covert Ops", "Piloting", "Nunchucks"],
+  skills: "Covert Ops, Piloting, Nunchucks",
   biography: "A trained agent skilled in various ....",
   isDispatched: false
 }
@@ -99,7 +99,7 @@ function updateKokoCard() {
 // Oslo has been requested for a mission of upmost importance! He must be dispatched to America, but our program is trying to dispatch him to other countries. We need to fix this function to make sure that Oslo is being dispatched to the correct location, and that our console accurately displays this. After Oslo is dispatched, his agent card and status also need to update.
 
 function dispatchOslo() {
-  let missionSkills = ["Ciphers", "Hacking", "Encryption"]
+  let missionSkills = "Ciphers, Hacking, Encryption"
 
   oslo.location = dispatchLocation
   if (oslo.location = "London") {
@@ -122,8 +122,8 @@ function dispatchOslo() {
 
 function dispatchXanther() {
   // NOTE: Here, we print the skills the mission requires and Xanther's skills so we can see he's being dispatched for a mission he has skills for
-  console.log('Mission skills necessary', missionSkills)
-  console.log('Xanthers skills', xanther.skills)
+  console.log('Mission skills necessary: ', missionSkills)
+  console.log('Xanthers skills: ', xanther.skills)
   if (xanther.skills = missionSkills) {
     console.log("Xanther has been dispatched!")
   }
