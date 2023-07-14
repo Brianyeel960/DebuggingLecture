@@ -49,7 +49,7 @@ function updateOsloCard() {
 
   if (oslo.isDispatched == true) {
     button.disabled = true
-    console.log(button)
+    // console.log(button)
   }
 }
 
@@ -69,7 +69,7 @@ function updateXantherCard() {
 
   if (xanther.isDispatched == true) {
     button.disabled = true
-    console.log(button)
+    // console.log(button)
   }
 }
 
@@ -89,7 +89,7 @@ function updateKokoCard() {
 
   if (koko.isDispatched == true) {
     button.disabled = true
-    console.log(button)
+    // console.log(button)
   }
 }
 
