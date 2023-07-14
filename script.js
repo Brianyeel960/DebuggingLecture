@@ -121,6 +121,9 @@ function dispatchOslo() {
 
 function dispatchXanther() {
   let missionSkills = ["Ciphers", "Hacking", "Encryption"]
+  // NOTE: Here, we print the skills the mission requires and Xanther's skills so we can see he's being dispatched for a mission he has skills for
+  console.log('Mission skills necessary', missionSkills)
+  console.log('Xanthers skills', xanther.skills)
   if (xanther.skills = missionSkills) {
     console.log("Xanther has been dispatched!")
   }
