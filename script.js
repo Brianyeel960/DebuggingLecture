@@ -100,33 +100,34 @@ function updateKokoCard() {
 
 function dispatchOslo() {
   let missionSkills = "Ciphers, Hacking, Encryption"
+  let dispatchLocation = 'America'
 
   oslo.location = dispatchLocation
-  if (oslo.location = "London") {
+  if (oslo.location == "London") {
     console.log('Oslo Dispatched to London')
   }
-  if (oslo.location = "America") {
+  if (oslo.location == "America") {
     console.log('Oslo Dispatched to America')
   }
-  if (oslo.location = "Japan") {
+  if (oslo.location == "Japan") {
     console.log("Oslo Dispatched to Japan")
   }
   let dispatchLocation = 'America'
-
-
-  updateOsloCard()
+oslo.isDispatched = true
+  
+updateOsloCard()
 }
 
 
 // Our program is currently dispatching Xanther for a mission that he does not have the right skill set for! We need to fix this function to make sure it can read the required mission skills and check if they match Xanther's skills. If they do not match, we should get a console log stating that Xanther cannot be dispatched, and his agent card and status should not update. 
 
 function dispatchXanther() {
+  let missionSkills = "swimming, Espionage"
   // NOTE: Here, we print the skills the mission requires and Xanther's skills so we can see he's being dispatched for a mission he has skills for
   console.log('Mission skills necessary: ', missionSkills)
   console.log('Xanthers skills: ', xanther.skills)
-  if (xanther.skills = missionSkills) {
+  if (xanther.skills == missionSkills) {
     console.log("Xanther has been dispatched!")
-  }
   xanther.isDispatched = true
 
   updateXantherCard()
@@ -135,8 +136,8 @@ function dispatchXanther() {
 // Koko is one of our newer agents on the field. Right now our program is not properly checking Koko's age to verify their mission clearance. This function needs to properly compare the mission clearance ages to Koko's age and dispatch Koko for any mission they have the experience to perform. 
 
 function dispatchkoko() {
-  let newbieAge = [0]
-  let rookieAge = '5'
+  let newbieAge = 0
+  let rookieAge = 5
   let seasonedAge = 13
   let seniorAge = 20
 
@@ -144,13 +145,13 @@ function dispatchkoko() {
   if (koko.age = seniorAge) {
     console.log('Koko has been cleared and dispatched for a senior mission!')
     koko.isDispatched = true
-  } else if (koko.age == seasonedAge) {
+  } else if (Koko.age >= seasonedAge) {
     console.log('Koko has been cleared and dispatched for a seasoned mission')
     koko.isDispatched = true
-  } else if (koko.age === rookieAge) {
+  } else if (Koko.age >= rookieAge) {
     console.log('Koko has been cleared and dispatched for a rookie mission')
     koko.isDispatched = true
-  } else if (koko.age == newbieAge) {
+  } else if (Koko.age >= newbieAge) {
     console.log('Koko has been cleared and dispatched for a newbie mission')
     koko.isDispatched = true
   }
